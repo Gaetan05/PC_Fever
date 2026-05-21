@@ -322,7 +322,7 @@ class VibeFlowApp:
                                     bgcolor=self.colors["card"],
                                 ),
                                 width=200,
-                                padding=ft.padding.only(top=25),
+                                padding=ft.Padding.only(top=25),
                             ),
                         ],
                         spacing=20,
@@ -421,7 +421,7 @@ class VibeFlowApp:
                 height=100,
                 border_radius=20,
                 bgcolor=self.colors["card"],
-                alignment=ft.alignment.center,
+                alignment=ft.Alignment.CENTER,
             ),
             on_tap=on_click,
             hover_color=self.colors["card_hover"],
@@ -810,7 +810,7 @@ class VibeFlowApp:
                     height=160,
                     border_radius=20,
                     bgcolor=self.colors["card"],
-                    alignment=ft.alignment.center,
+                    alignment=ft.Alignment.CENTER,
                     border=ft.border.all(2, ft.colors.TRANSPARENT),
                 ),
                 on_tap=lambda e, m=name: self.select_mood(m),
@@ -986,7 +986,7 @@ class VibeFlowApp:
             height=140,
             border_radius=20,
             bgcolor=self.colors["card"],
-            alignment=ft.alignment.center,
+            alignment=ft.Alignment.CENTER,
         )
     
     def bar_chart_day(self, day, height_percent):
