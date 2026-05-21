@@ -160,8 +160,8 @@ class VibeFlowApp:
         self.gradient_container = ft.Container(
             content=ft.Column([], spacing=0),
             gradient=ft.LinearGradient(
-                begin=ft.alignment.top_left,
-                end=ft.alignment.bottom_right,
+                begin=ft.Alignment.TOP_LEFT,
+                end=ft.Alignment.BOTTOM_RIGHT,
                 colors=[self.colors["gradient_1"], self.colors["gradient_2"], self.colors["gradient_3"]],
                 stops=[0.0, 0.5, 1.0],
             ),
@@ -225,7 +225,7 @@ class VibeFlowApp:
             ),
             width=80,
             bgcolor=self.colors["card"],
-            border_radius=ft.border_radius.only(top_left=20, bottom_left=20),
+            border_radius=ft.BorderRadius(20, 0, 20, 0),
             padding=10,
         )
     
@@ -333,8 +333,8 @@ class VibeFlowApp:
             padding=30,
             border_radius=25,
             gradient=ft.LinearGradient(
-                begin=ft.alignment.top_left,
-                end=ft.alignment.bottom_right,
+                begin=ft.Alignment.TOP_LEFT,
+                end=ft.Alignment.BOTTOM_RIGHT,
                 colors=["#1a1a2e", "#16213e"],
             ),
         )
@@ -602,8 +602,8 @@ class VibeFlowApp:
             padding=40,
             border_radius=30,
             gradient=ft.LinearGradient(
-                begin=ft.alignment.top_left,
-                end=ft.alignment.bottom_right,
+                begin=ft.Alignment.TOP_LEFT,
+                end=ft.Alignment.BOTTOM_RIGHT,
                 colors=["#1a1a2e", "#16213e", "#0f3460"],
             ),
         )
@@ -997,10 +997,10 @@ class VibeFlowApp:
                     height=height_percent,
                     width=30,
                     bgcolor=self.colors["primary"],
-                    border_radius=ft.border_radius.only(top_left=10, top_right=10),
+                    border_radius=ft.BorderRadius(10, 10, 0, 0),
                     gradient=ft.LinearGradient(
-                        begin=ft.alignment.bottom_center,
-                        end=ft.alignment.top_center,
+                        begin=ft.Alignment.BOTTOM_CENTER,
+                        end=ft.Alignment.TOP_CENTER,
                         colors=[self.colors["primary"], self.colors["secondary"]],
                     ),
                 ),
@@ -1125,4 +1125,4 @@ def main(page: ft.Page):
 
 
 if __name__ == "__main__":
-    ft.app(target=main, port=8550)
+    ft.run(main, port=8550)
