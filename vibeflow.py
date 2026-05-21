@@ -291,7 +291,7 @@ class VibeFlowApp:
                     ft.Text(f"{user['name']}!", 
                            size=48, 
                            weight=ft.FontWeight.BOLD,
-                           gradient=ft.LinearGradient(colors=[self.colors["primary"], self.colors["secondary"]]),
+                           style=ft.TextStyle(foreground=ft.LinearGradient(colors=[self.colors["primary"], self.colors["secondary"]])),
                            ),
                     ft.Row(
                         controls=[
